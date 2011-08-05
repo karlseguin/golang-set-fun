@@ -11,6 +11,7 @@ func TestCanAddUniqueValues(t *testing.T) {
     set.Add(v)
   }
   
+  
   Assert(t, set.Length() == len(values), "Wrong length")
   for _,v := range values {
     Assert(t, set.Contains(v), "Missing value")
@@ -26,6 +27,7 @@ func TestUniqueRemovesDuplicates(t *testing.T) {
     set.Add(v)
   }
   set.RemoveDuplicates()
+  
   Assert(t, set.Length() == len(uniques), "Wrong length")
   for _,v := range uniques {
     Assert(t, set.Contains(v), "Missing value")
